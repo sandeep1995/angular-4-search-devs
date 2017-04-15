@@ -3,8 +3,8 @@
 This Angular 4 project is a part of tutorial on [ApplyHead.com](https://applyhead.com)
 
 ## Clone this repo
-```
-git clone https://github.com/sandeep1995/angular-4-search-devs.git```
+
+`git clone https://github.com/sandeep1995/angular-4-search-devs.git`
 
 ## Install packages
 
