@@ -21,6 +21,7 @@ export class SearchUsersComponent implements OnInit {
     this.error_text = "";
     if (place || language) {
       this.place = place;
+      this.language = language;
       this.serachService.getUsersByPlace(place, language).subscribe(
         users => {
           this.results = users;
@@ -34,8 +35,8 @@ export class SearchUsersComponent implements OnInit {
     }
   }
 
-  getDetails(login: string) {
-    this.serachService.getDetailsByLogin(login).subscribe(
+  getDetails(username: string) {
+    this.serachService.getDetailsByLogin(username).subscribe(
       userDatils => {
         this.selectedUser = userDatils;
         this.selected = true;
