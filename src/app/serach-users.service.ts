@@ -11,7 +11,7 @@ export class SerachUsersService {
   private getUserDetailsEndPoint = "https://api.github.com/users/";
   constructor(private http: Http) { }
 
-  getUsersByPlace(place: string, language: string) {
+  getUsersByPlaceAndLanguage(place: string, language: string) {
     let url;
     if (place && !language) {
       url = `${this.searchUsersEndPoint}location:${place}`;
@@ -26,9 +26,9 @@ export class SerachUsersService {
       .catch(this.handleError);
   }
 
-  getDetailsByLogin(login: string) {
-    if (login) {
-      let url = `${this.getUserDetailsEndPoint}${login}`;
+  getDetailsByUserName(username: string) {
+    if (username) {
+      let url = `${this.getUserDetailsEndPoint}${username}`;
       return this.http.get(url)
         .map((res: Response) => res.json())
         .catch(this.handleError);
