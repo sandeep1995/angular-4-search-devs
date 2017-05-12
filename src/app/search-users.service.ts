@@ -5,7 +5,7 @@ import 'rxjs/add/operator/catch';
 import 'rxjs/add/operator/map';
 
 @Injectable()
-export class SerachUsersService {
+export class SearchUsersService {
 
   private searchUsersEndPoint = "https://api.github.com/search/users?q=";
   private getUserDetailsEndPoint = "https://api.github.com/users/";
