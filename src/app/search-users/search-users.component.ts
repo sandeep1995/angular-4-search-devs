@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { SerachUsersService } from '../serach-users.service';
+import { SearchUsersService } from '../search-users.service';
 @Component({
   selector: 'app-search-users',
   templateUrl: './search-users.component.html',
@@ -12,7 +12,7 @@ export class SearchUsersComponent implements OnInit {
   selected: boolean = false;
   selectedUser: any;
   error_text: string = "";
-  constructor(private serachService: SerachUsersService) { }
+  constructor(private searchService: SearchUsersService) { }
 
   ngOnInit() {}
 
@@ -22,7 +22,7 @@ export class SearchUsersComponent implements OnInit {
     if (place || language) {
       this.place = place;
       this.language = language;
-      this.serachService.getUsersByPlaceAndLanguage(place, language).subscribe(
+      this.searchService.getUsersByPlaceAndLanguage(place, language).subscribe(
         users => {
           this.results = users;
         },
@@ -36,7 +36,7 @@ export class SearchUsersComponent implements OnInit {
   }
 
   getDetails(username: string) {
-    this.serachService.getDetailsByUserName(username).subscribe(
+    this.searchService.getDetailsByUserName(username).subscribe(
       userDatils => {
         this.selectedUser = userDatils;
         this.selected = true;

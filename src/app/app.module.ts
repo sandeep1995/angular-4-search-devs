@@ -5,7 +5,7 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { SearchUsersComponent } from './search-users/search-users.component';
-import { SerachUsersService } from './serach-users.service';
+import { SearchUsersService } from './search-users.service';
 
 
 @NgModule({
@@ -18,7 +18,7 @@ import { SerachUsersService } from './serach-users.service';
     FormsModule,
     HttpModule
   ],
-  providers: [ SerachUsersService ],
+  providers: [ SearchUsersService ],
   bootstrap: [ AppComponent ]
 })
 export class AppModule { }
