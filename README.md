@@ -14,6 +14,6 @@ This Angular 4 project is a part of [Angular 4 tutorial on ApplyHead.com](https:
 
 `npm install -g @angular/cli`
 
-## Serve this project and visit localhost:3000
+## Serve this project and visit localhost:4200
 
 `npm start`
